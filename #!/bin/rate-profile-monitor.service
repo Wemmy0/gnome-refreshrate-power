@@ -1,0 +1,11 @@
+[Unit]
+Description=Monitor and adjust GNOME monitor settings based on power mode
+After=graphical.target
+
+[Service]
+ExecStart=/bin/bash /home/%u/.rate-profile-monitor.sh
+Restart=always
+Nice=10
+
+[Install]
+WantedBy=default.target
